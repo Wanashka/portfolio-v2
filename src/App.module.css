@@ -1,0 +1,386 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    background-image: url("./sourse/image/background1.svg"), url("./sourse/image/background2.svg");
+    background-position: top left, right top 1300px;
+    background-repeat: no-repeat, no-repeat;
+    overflow: auto;
+}
+
+.header {
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blockMenu {
+    display: flex;
+    margin-left: 93px;
+    height: 100%;
+    max-width: 600px;
+}
+
+.itemMenu {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #928A97;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemMenu:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.itemMenuActive {
+    font-weight: bold;
+    color: #F44336;
+    background-image: url("./sourse/image/activePoint.svg");
+    background-size: 151px 125px;
+    background-repeat: no-repeat;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    margin-top: -100px;
+    height: 100vh;
+    margin-left: 110px;
+}
+
+.mainBlockPresentation {
+    margin: auto 0;
+    padding-top: 150px;
+}
+
+.fullName {
+    font-size: 38px;
+    font-weight: 800;
+    -webkit-text-stroke: 1px #ffffff;
+    margin-bottom: 15px;
+}
+
+.vacancy {
+    font-weight: 600;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.socialSite {
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.socialSite img {
+    width: 33px;
+}
+
+.socialSite > a:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.scroll {
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.aboutMe {
+    height: 100vh;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+.mainBlockAboutMe {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -34px;
+    gap: 50px;
+}
+
+.myPhoto {
+    max-width: 475px;
+    width: 100%;
+}
+
+.framePhoto {
+    position: relative;
+}
+
+.arrowLeft {
+    position: absolute;
+    top: 50%;
+    transform: rotate(180deg);
+}
+
+.arrowRight {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.textBlock {
+    /*margin-left: 55px;*/
+    /*margin-right: 55px;*/
+}
+
+.titleBlock {
+    color: #F44336;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.descriptionBlock {
+    color: #000C24;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 617px;
+    margin-bottom: 48px;
+}
+
+.btnDownload {
+    background-color: #000C24;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    width: 170px;
+    height: 53px;
+    border-radius: 4px;
+    border: none;
+    transition: transform 0.3s;
+}
+
+.btnDownload:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.scrollAboutMe {
+    height: 30px;
+    margin-top: -30px;
+}
+
+.subtitle {
+    color: #F44336;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skillsItem {
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    list-style-type: none;
+    padding: 8px 12px;
+    background-color: #928A97;
+    border-radius: 4px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    margin-top: 48px;
+    gap: 8px;
+}
+
+.linkTo {
+    width: 31px;
+}
+
+.countWorks {
+    /*border: red solid 2px;*/
+    display: flex;
+    height: 30px;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.workItem {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    border-bottom: 4px solid #C4C4C4;
+    color: #000C24;
+    font-size: 14px;
+    font-weight: 600;
+    transition: padding-bottom 0.5s;
+}
+
+.workItem:hover {
+    cursor: pointer;
+    padding-bottom: 12px;
+}
+
+.workItemActive {
+    border-bottom: 6px solid #000C24;
+}
+
+.blockConnect {
+    display: flex;
+    margin-bottom: -215px;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    background: url("./sourse/image/backgroundConnect.svg") no-repeat;
+    background-size: cover;
+}
+
+.blockConnectMain {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    margin: 70px 110px 295px;
+}
+
+.messageFromMe {
+    font-size: 38px;
+    font-weight: 600;
+    color: #000C24;
+    /*max-width: 428px;*/
+    /*width: 50%;*/
+    width: 100%;
+    margin-left: 38px;
+    margin-right: 32px;
+}
+
+.inputs {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    width: 100%;
+    margin-right: 38px;
+    margin-left: 32px;
+}
+
+.inputName {
+    width: 100%;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    height: 52px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #928A97;
+    padding: 9px;
+    font-family: 'League Spartan', sans-serif;
+    border: 1px solid #000;
+
+
+}
+
+.inputEmail {
+    width: 100%;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    height: 52px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #928A97;
+    padding: 9px;
+    font-family: 'League Spartan', sans-serif;
+    border: 1px solid #000;
+
+
+}
+
+.inputMessage {
+    width: 100%;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #928A97;
+    padding: 9px;
+    font-family: 'League Spartan', sans-serif;
+    border: 1px solid #000;
+    resize: none;
+    height: 125px;
+
+}
+
+.btnSendMsg {
+    padding: 16px 24px;
+    background-color: #000C24;
+    color: white;
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.btnSendMsg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    height: 215px;
+    background-color: #000C24;
+    text-align: center;
+    background-image: url("./sourse/image/backgroundFooter.svg");
+    background-repeat: no-repeat;
+    background-position: right 30px top;
+}
+
+.contentFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yearRelease {
+    display: flex;
+    margin-top: 28px;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (min-width: 1400px) {
+    .container {
+        background-size: 100%;
+    }
+}
+
+/*@media (max-width: 950px) {*/
+/*    .aboutMe{*/
+/*        margin-left: 30px;*/
+/*        margin-right: 30px;*/
+/*    }*/
+/*}*/
