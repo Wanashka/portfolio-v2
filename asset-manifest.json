@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portfolio-v2/static/css/main.ef7ab532.css",
+    "main.js": "/portfolio-v2/static/js/main.29d0988f.js",
+    "static/js/787.a7a53f8a.chunk.js": "/portfolio-v2/static/js/787.a7a53f8a.chunk.js",
+    "static/media/portfolioV1.png": "/portfolio-v2/static/media/portfolioV1.d9164cc3e0f8ae17f9b3.png",
+    "static/media/background1.svg": "/portfolio-v2/static/media/background1.6449ff653f4a30a1da1f.svg",
+    "static/media/myPhoto.jpg": "/portfolio-v2/static/media/myPhoto.1bc64f46b48c6f19cc1c.jpg",
+    "static/media/background2.svg": "/portfolio-v2/static/media/background2.878dcd0ccd14492232b4.svg",
+    "static/media/portfolioV2.png": "/portfolio-v2/static/media/portfolioV2.2ca74239c4c0f2470ed0.png",
+    "static/media/todo_react.png": "/portfolio-v2/static/media/todo_react.2eb2cd1586db82540b25.png",
+    "static/media/todo_js.png": "/portfolio-v2/static/media/todo_js.96136e9ff7ee1a3a5b14.png",
+    "static/media/layout-welbex.jpg": "/portfolio-v2/static/media/layout-welbex.5fcb92e8a2d25528a003.jpg",
+    "static/media/backgroundConnect.svg": "/portfolio-v2/static/media/backgroundConnect.2828d9315b4263381df8.svg",
+    "static/media/logoTelegram.png": "/portfolio-v2/static/media/logoTelegram.7554a2f74cdeb493bcd9.png",
+    "static/media/backgroundFooter.svg": "/portfolio-v2/static/media/backgroundFooter.f1d9c07d7ab46ecb3568.svg",
+    "static/media/activePoint.svg": "/portfolio-v2/static/media/activePoint.5e403644f2c536c1a61b.svg",
+    "static/media/scrollBlack.svg": "/portfolio-v2/static/media/scrollBlack.17042d26ef0bec1f3c638b2e80cca0d9.svg",
+    "static/media/scrollWhite.svg": "/portfolio-v2/static/media/scrollWhite.939df94557a6e9a3cc8ce5c7ec6b0eeb.svg",
+    "index.html": "/portfolio-v2/index.html",
+    "static/media/copyright.svg": "/portfolio-v2/static/media/copyright.8d1955842c116f49ca62695ed88f54aa.svg",
+    "main.ef7ab532.css.map": "/portfolio-v2/static/css/main.ef7ab532.css.map",
+    "main.29d0988f.js.map": "/portfolio-v2/static/js/main.29d0988f.js.map",
+    "787.a7a53f8a.chunk.js.map": "/portfolio-v2/static/js/787.a7a53f8a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef7ab532.css",
+    "static/js/main.29d0988f.js"
+  ]
+}
