@@ -132,6 +132,7 @@ html {
     width: 100%;
     max-height: 600px;
     height: 100%;
+    border-radius: 10px;
 }
 
 .framePhoto {
@@ -368,6 +369,10 @@ html {
         margin-left: 0;
         height: 100%;
         max-width: 100%;
+    }
+
+    .itemMenu {
+        padding-right: 0;
     }
 
     .presentation {

@@ -26,8 +26,8 @@ const BlockConnect = () => {
         <div className={s.blockConnect} id={"blockConnect"}>
             <div className={s.blockConnectMain}>
                 <div className={s.messageFromMe}>
-                    Напишите мне.<br/>
-                    Я хотел бы услышать ваше мнение.
+                    Напишите мне,<br/>
+                    если у вас остались вопросы.
                 </div>
                 <div className={s.inputs}>
                     <div className={s.titleBlock}>Связаться</div>
