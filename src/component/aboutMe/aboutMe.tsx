@@ -11,12 +11,13 @@ const AboutMe = () => {
                     <img src={myPhoto} className={s.myPhoto}/>
                 </div>
                 <div className={s.textBlock}>
-                    <div className={s.titleBlock}>About Me</div>
-                    <div className={s.descriptionBlock}>An inquisitive Computer Science Engineering student,
-                        skilled in leadership, seeking to leverage
-                        solid development skills with focus on collaboration, communication and passion.
+                    <div className={s.titleBlock}>Обо мне</div>
+                    <div className={s.descriptionBlock}>
+                        Я молодой и амбициозный специалист, увлеченный программированием. Стремлюсь к тому, чтобы всегда
+                        быть в курсе последних технологических новинок в области программирования.
                     </div>
-                    <button className={s.btnDownload}>Download CV</button>
+                    <a href={"https://rostov.hh.ru/resume_converter/%D0%9A%D0%BE%D1%87%D0%B5%D1%82%D0%BE%D0%B2%20%D0%98%D0%B2%D0%B0%D0%BD%20%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87.pdf?hash=4981ba81ff09a38b360039ed1f4368555a6f6c&type=pdf&hhtmFrom=resume"}
+                       className={s.btnDownload} download>Скачать CV</a>
                 </div>
             </div>
             <div className={s.scrollBlock}>

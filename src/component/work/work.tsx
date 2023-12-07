@@ -1,67 +1,92 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import s from "../../App.module.css";
 import GitHub from "../../sourse/image/logoGithub.png";
 import linkToSite from "../../sourse/image/linkToSite.png";
 import swipe from "../../sourse/image/swipe.png";
-import myPhoto from "../../sourse/image/myPhoto.jpg";
 import scrollBlack from "../../sourse/image/scrollBlack.svg";
 
-const Work = () => {
-    const countWork = () => {
+const Work = (props: any) => {
+        const [currentWork, setCurrentWork] = useState<number>(2)
+        const [viewWork, setViewWork] = useState<any>({})
 
+        const countWork = props.project.map((item: object, index: number) => {
+            if (currentWork === index) {
+                return (<div className={`${s.workItem} ${s.workItemActive}`}>0{index + 1}</div>)
+            }
+            return (<div className={s.workItem} onClick={() => setCurrentWork(index)}>0{index + 1}</div>)
+        })
+
+        const scrollThrough = (step: number) => {
+            if ((currentWork + step) >= props.project.length) {
+                setCurrentWork(0)
+            } else if ((currentWork + step) === -1) {
+                setCurrentWork(props.project.length - 1)
+            } else {
+                setCurrentWork(currentWork + (step))
+            }
+        }
+
+        useEffect(() => {
+            setViewWork(props.project[currentWork])
+        }, [currentWork])
+
+        const viewSkills = () => viewWork.skills.map((item: string) => (<li className={s.skillsItem}>{item}</li>))
+
+
+        if (Object.keys(viewWork).length === 0) return null
+
+
+        return (
+            <div className={s.aboutMe} id={"works"}>
+                <div className={s.mainBlockAboutMe}>
+                    <div className={s.textBlock}>
+
+                        <div className={s.titleBlock}>Работы</div>
+
+
+                        <div className={s.subtitle}>{viewWork.title}</div>
+                        <div className={s.descriptionBlock}>
+                            {viewWork.description}
+                        </div>
+
+                        <ul className={s.skills}>
+                            {viewSkills()}
+                        </ul>
+
+                        <div className={s.links}>
+                            <a href={viewWork.Github}>
+                                <img className={s.linkTo} src={GitHub} alt={"Ссылка на код проекта"}/>
+                            </a>
+                            <a href={viewWork.site}>
+                                <img className={s.linkTo} src={linkToSite} alt={"Ссылка на задеплоенный проект"}/>
+                            </a>
+                        </div>
+
+                        <div className={s.countWorks}>
+                            {countWork}
+                        </div>
+
+                    </div>
+
+                    <div className={s.framePhoto}>
+                        <span onClick={() => scrollThrough(-1)} className={s.arrowLeft}>
+                            <img alt={"Arrow"} src={swipe}/>
+                        </span>
+                        <img alt={"Превью сайта"} src={viewWork.image} className={s.myPhoto}/>
+                        <span onClick={() => scrollThrough(1)} className={s.arrowRight}>
+                            <img alt={"Arrow"} src={swipe}/>
+                        </span>
+                    </div>
+
+                </div>
+                <div className={s.scrollBlock}>
+                    <a href={"#blockConnect"}>
+                        <img className={s.scrollAboutMe} alt={"scroll"} src={scrollBlack}/>
+                    </a>
+                </div>
+            </div>
+        );
     }
-    return (
-        <div className={s.aboutMe} id={"works"}>
-            <div className={s.mainBlockAboutMe}>
-                <div className={s.textBlock}>
-
-                    <div className={s.titleBlock}>Works</div>
-                    <div className={s.subtitle}>Simon Game</div>
-                    <div className={s.descriptionBlock}>An inquisitive Computer Science Engineering student,
-                        skilled in leadership, seeking to leverage solid development skills with focus on
-                        collaboration, communication and passion.
-                    </div>
-
-                    <ul className={s.skills}>
-                        <li className={s.skillsItem}>HTML5</li>
-                        <li className={s.skillsItem}>CSS</li>
-                        <li className={s.skillsItem}>JavaScript</li>
-                        <li className={s.skillsItem}>ReactJS</li>
-                    </ul>
-
-                    <div className={s.links}>
-                        <a href={""}>
-                            <img className={s.linkTo} src={GitHub} alt={"Ссылка на код проекта"}/>
-                        </a>
-                        <a href={""}>
-                            <img className={s.linkTo} src={linkToSite} alt={"Ссылка на задеплоенный проект"}/>
-                        </a>
-                    </div>
-
-                    <div className={s.countWorks}>
-                        <div className={`${s.workItem} ${s.workItemActive}`}>01</div>
-                        <div className={s.workItem}>02</div>
-                        <div className={s.workItem}>03</div>
-                        <div className={s.workItem}>04</div>
-                        <div className={s.workItem}>05</div>
-                    </div>
-
-                </div>
-
-                <div className={s.framePhoto}>
-                    <a href={""} className={s.arrowLeft}><img src={swipe}/> </a>
-                    <img src={myPhoto} className={s.myPhoto}/>
-                    <a href={""} className={s.arrowRight}><img src={swipe}/> </a>
-                </div>
-
-            </div>
-            <div className={s.scrollBlock}>
-                <a href={"#blockConnect"}>
-                    <img className={s.scrollAboutMe} alt={"scroll"} src={scrollBlack}/>
-                </a>
-            </div>
-        </div>
-    );
-};
+;
 
 export default Work;

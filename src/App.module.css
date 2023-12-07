@@ -47,10 +47,10 @@ html {
 }
 
 .itemMenuActive {
-    font-weight: bold;
     color: #F44336;
     background-image: url("./sourse/image/activePoint.svg");
-    background-size: 151px 125px;
+    background-size: 100%;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -107,6 +107,10 @@ html {
     height: 30px;
 }
 
+.scrollBlock {
+    width: 100%;
+}
+
 .aboutMe {
     height: 100vh;
     margin-left: 110px;
@@ -125,6 +129,8 @@ html {
 .myPhoto {
     max-width: 475px;
     width: 100%;
+    max-height: 600px;
+    height: 100%;
 }
 
 .framePhoto {
@@ -135,17 +141,21 @@ html {
     position: absolute;
     top: 50%;
     transform: rotate(180deg);
+    transition: margin-left 0.3s;
 }
 
 .arrowRight {
     position: absolute;
     top: 50%;
     right: 0;
+    transition: margin-right 0.3s;
 }
 
-.textBlock {
-    /*margin-left: 55px;*/
-    /*margin-right: 55px;*/
+.arrowLeft:hover,
+.arrowRight:hover {
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .titleBlock {
@@ -167,18 +177,18 @@ html {
 .btnDownload {
     background-color: #000C24;
     color: white;
+    font-family: 'Neucha', cursive;
     font-size: 16px;
     font-weight: 500;
-    width: 170px;
-    height: 53px;
     border-radius: 4px;
-    border: none;
-    transition: transform 0.3s;
+    padding: 16px 24px;
+    transition: background-color 0.3s;
+    text-decoration: none;
 }
 
 .btnDownload:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    background-color: #F44336;
 }
 
 .scrollAboutMe {
@@ -221,7 +231,6 @@ html {
 }
 
 .countWorks {
-    /*border: red solid 2px;*/
     display: flex;
     height: 30px;
     gap: 8px;
@@ -272,64 +281,35 @@ html {
     font-size: 38px;
     font-weight: 600;
     color: #000C24;
-    /*max-width: 428px;*/
-    /*width: 50%;*/
     width: 100%;
     margin-left: 38px;
     margin-right: 32px;
 }
 
 .inputs {
-    /*display: flex;*/
-    /*flex-direction: column;*/
     width: 100%;
     margin-right: 38px;
     margin-left: 32px;
 }
 
+.inputMessage,
+.inputEmail,
 .inputName {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     border-radius: 4px;
-    height: 52px;
     font-size: 20px;
     font-weight: 400;
     color: #928A97;
     padding: 9px;
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'Neucha', cursive;
     border: 1px solid #000;
-
-
-}
-
-.inputEmail {
-    width: 100%;
-    margin-bottom: 24px;
-    border-radius: 4px;
     height: 52px;
-    font-size: 20px;
-    font-weight: 400;
-    color: #928A97;
-    padding: 9px;
-    font-family: 'League Spartan', sans-serif;
-    border: 1px solid #000;
-
-
 }
 
 .inputMessage {
-    width: 100%;
-    margin-bottom: 24px;
-    border-radius: 4px;
-    font-size: 20px;
-    font-weight: 400;
-    color: #928A97;
-    padding: 9px;
-    font-family: 'League Spartan', sans-serif;
-    border: 1px solid #000;
     resize: none;
     height: 125px;
-
 }
 
 .btnSendMsg {
@@ -378,9 +358,124 @@ html {
     }
 }
 
-/*@media (max-width: 950px) {*/
-/*    .aboutMe{*/
-/*        margin-left: 30px;*/
-/*        margin-right: 30px;*/
-/*    }*/
-/*}*/
+@media (max-width: 768px) {
+    .container {
+        background-size: 190%;
+    }
+
+    .blockMenu {
+        margin-left: 0;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .presentation {
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .aboutMe {
+        height: 100vh;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .mainBlockAboutMe {
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+        padding-bottom: 50px;
+        margin-bottom: -70px;
+    }
+
+    .scroll {
+        margin-bottom: 60px;
+    }
+
+    .myPhoto {
+        max-width: 300px;
+        margin-top: 5px;
+    }
+
+    .titleBlock {
+        font-size: 28px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .descriptionBlock {
+        font-size: 20px;
+        margin-bottom: 20px;
+        height: 150px;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.72);
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
+
+    .descriptionBlock:hover {
+        height: auto;
+        overflow: visible;
+        background-color: white;
+        display: inline-flex;
+    }
+
+    .btnDownload {
+        padding: 16px 24px;
+    }
+
+    .textBlock {
+        max-width: 400px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .skills {
+        gap: 6px;
+    }
+
+    .links {
+        margin-top: 15px;
+        gap: 8px;
+    }
+
+    .countWorks {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .blockConnectMain {
+        flex-wrap: wrap-reverse;
+        margin: 30px 0 255px;
+    }
+
+    .messageFromMe {
+        font-size: 22px;
+    }
+
+    .inputMessage,
+    .inputEmail,
+    .inputName {
+        margin-bottom: 16px;
+    }
+
+    .inputMessage {
+        height: 80px;
+    }
+
+    .btnSendMsg {
+        margin-top: -20px;
+    }
+
+    .footer {
+        background-image: none;
+    }
+
+}
