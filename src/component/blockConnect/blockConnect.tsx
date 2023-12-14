@@ -1,16 +1,19 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import s from "../../App.module.css";
 import emailjs from '@emailjs/browser';
+import {buildCreateSlice} from "@reduxjs/toolkit";
 
 const BlockConnect = () => {
     const [fromName, setFromName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
+    const [btnDisabled, setBtnDisabled] = useState(true)
 
     const form = useRef<any>();
 
     const sendEmail = (e: any) => {
         e.preventDefault();
+        setBtnDisabled(true)
 
         emailjs.sendForm('service_pcmgtzc', 'template_6lqhvvh', form.current, '0N9-k_KOoTZLwZ1S6')
             .then((result) => {
@@ -21,6 +24,17 @@ const BlockConnect = () => {
                 console.log(error)
             });
     };
+    useEffect(() => {
+        switchBtn()
+    }, [fromName, email, message])
+
+    const switchBtn = () => {
+        if (fromName.length > 0 && email.length > 0 && message.length > 0) {
+            setBtnDisabled(false);
+        } else {
+            setBtnDisabled(true)
+        }
+    }
 
     return (
         <div className={s.blockConnect} id={"blockConnect"}>
@@ -48,7 +62,10 @@ const BlockConnect = () => {
                                   name={"message"}
                                   className={s.inputMessage}
                                   placeholder={"Сообщение"}/>
-                        <button type={"submit"} className={s.btnSendMsg}>Отправить</button>
+                        <button type={"submit"}
+                                className={`${s.btnSendMsg} ${btnDisabled && s.btnSendMsgDisabled}`}
+                                disabled={btnDisabled}>Отправить
+                        </button>
                     </form>
                 </div>
             </div>

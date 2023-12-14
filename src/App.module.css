@@ -320,11 +320,21 @@ html {
     color: white;
     border-radius: 4px;
     transition: transform 0.3s;
+
 }
 
 .btnSendMsg:hover {
     cursor: pointer;
     transform: scale(1.1);
+}
+
+.btnSendMsgDisabled {
+    background-color: #928A97;
+}
+
+.btnSendMsgDisabled:hover {
+    transform: scale(1);
+    cursor: auto;
 }
 
 .footer {

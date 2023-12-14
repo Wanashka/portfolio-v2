@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import s from "../../App.module.css";
 import GitHub from "../../sourse/image/logoGithub.png";
 import linkToSite from "../../sourse/image/linkToSite.png";
-import swipe from "../../sourse/image/swipe.png";
+import arrow from "../../sourse/image/swipe.png";
 import scrollBlack from "../../sourse/image/scrollBlack.svg";
 
 const Work = (props: any) => {
@@ -70,11 +70,11 @@ const Work = (props: any) => {
 
                     <div className={s.framePhoto}>
                         <span onClick={() => scrollThrough(-1)} className={s.arrowLeft}>
-                            <img alt={"Arrow"} src={swipe}/>
+                            <img alt={"Arrow"} src={arrow}/>
                         </span>
                         <img alt={"Превью сайта"} src={viewWork.image} className={s.myPhoto}/>
                         <span onClick={() => scrollThrough(1)} className={s.arrowRight}>
-                            <img alt={"Arrow"} src={swipe}/>
+                            <img alt={"Arrow"} src={arrow}/>
                         </span>
                     </div>
 
