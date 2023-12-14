@@ -141,13 +141,16 @@ html {
 
 .arrowLeft {
     position: absolute;
+    display: flex;
     top: 50%;
+    left: 0;
     transform: rotate(180deg);
     transition: margin-left 0.3s;
 }
 
 .arrowRight {
     position: absolute;
+    display: flex;
     top: 50%;
     right: 0;
     transition: margin-right 0.3s;
