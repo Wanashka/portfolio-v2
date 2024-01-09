@@ -18,7 +18,7 @@ const AboutMe = () => {
                         в курсе последних технологических тенденций. Моя страсть к созданию инновационных и эффективных
                         решений побуждает меня искать новые вызовы и улучшать свои навыки.
                     </div>
-                    <div>
+                    <div className={s.blockBtnDownload}>
                         <a href={"https://rostov.hh.ru/resume_converter/%D0%9A%D0%BE%D1%87%D0%B5%D1%82%D0%BE%D0%B2%20%D0%98%D0%B2%D0%B0%D0%BD%20%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87.pdf?hash=4981ba81ff09a38b360039ed1f4368555a6f6c&type=pdf&hhtmFrom=resume"}
                            className={s.btnDownload} download>Скачать CV</a>
                     </div>
