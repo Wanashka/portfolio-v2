@@ -104,7 +104,6 @@ html {
 .scroll {
     margin-right: auto;
     margin-top: auto;
-    margin-bottom: 20px;
     height: 30px;
 }
 
@@ -167,16 +166,19 @@ html {
     color: #F44336;
     font-size: 32px;
     font-weight: bold;
-    margin-top: 32px;
-    margin-bottom: 32px;
 }
 
 .descriptionBlock {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
     color: #000C24;
     font-size: 24px;
     font-weight: 400;
     max-width: 617px;
-    margin-bottom: 48px;
+
+    max-height: 100px;
+    background-color: white;
+    overflow: hidden;
 }
 
 .btnDownload {
@@ -201,11 +203,16 @@ html {
     margin-top: -30px;
 }
 
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .subtitle {
     color: #F44336;
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 24px;
 }
 
 .skills {
@@ -227,7 +234,6 @@ html {
 .links {
     display: flex;
     align-items: center;
-    margin-top: 48px;
     gap: 8px;
 }
 
@@ -239,7 +245,6 @@ html {
     display: flex;
     height: 30px;
     gap: 8px;
-    margin-top: 40px;
 }
 
 .workItem {
@@ -264,7 +269,6 @@ html {
 
 .blockConnect {
     display: flex;
-    margin-bottom: -215px;
     height: 100vh;
     width: 100%;
     justify-content: center;
@@ -279,7 +283,7 @@ html {
     justify-content: center;
     width: 100%;
     background-color: white;
-    margin: 70px 110px 295px;
+    margin: 70px 110px 70px;
 }
 
 .messageFromMe {
@@ -309,12 +313,12 @@ html {
     padding: 9px;
     font-family: 'Neucha', cursive;
     border: 1px solid #000;
-    height: 52px;
+    height: 42px;
 }
 
 .inputMessage {
     resize: none;
-    height: 125px;
+    height: 100px;
 }
 
 .btnSendMsg {
@@ -386,6 +390,7 @@ html {
 
     .itemMenu {
         padding-right: 0;
+        padding-bottom: 16px;
     }
 
     .presentation {
@@ -395,10 +400,17 @@ html {
         margin-right: 40px;
     }
 
+    .scrollBlock {
+        margin-bottom: 7px;
+    }
+
     .aboutMe {
         height: 100vh;
         margin-left: 40px;
         margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .mainBlockAboutMe {
@@ -407,10 +419,6 @@ html {
         gap: 20px;
         padding-bottom: 50px;
         margin-bottom: -70px;
-    }
-
-    .scroll {
-        margin-bottom: 60px;
     }
 
     .myPhoto {
@@ -449,6 +457,7 @@ html {
 
     .textBlock {
         max-width: 400px;
+        gap: 0;
     }
 
     .subtitle {
@@ -470,13 +479,18 @@ html {
         margin-bottom: 10px;
     }
 
+    .blockConnect {
+        margin-bottom: -215px;
+    }
+
     .blockConnectMain {
         flex-wrap: wrap-reverse;
         margin: 30px 0 255px;
     }
 
     .messageFromMe {
-        font-size: 22px;
+        display: none;
+        font-size: 24px;
     }
 
     .inputMessage,
@@ -487,10 +501,6 @@ html {
 
     .inputMessage {
         height: 80px;
-    }
-
-    .btnSendMsg {
-        margin-top: -20px;
     }
 
     .footer {

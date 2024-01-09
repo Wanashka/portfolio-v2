@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from './App.module.css';
 import AboutMe from "./component/aboutMe/aboutMe";
 import Presentation from "./component/presentation/presentation";
@@ -8,7 +8,6 @@ import Footer from "./component/footer/footer";
 import WorkContainer from "./component/work/workContainer";
 
 function App() {
-
     return (
         <div className={s.container}>
 
