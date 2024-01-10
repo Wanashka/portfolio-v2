@@ -176,7 +176,6 @@ html {
     font-weight: 400;
     max-width: 617px;
 
-    /*max-height: 100px;*/
     background-color: white;
     overflow: hidden;
 }
@@ -429,6 +428,7 @@ html {
     .myPhoto {
         max-width: 300px;
         margin-top: 5px;
+        border: rgba(0, 12, 36, 0.9) solid 1px;
     }
 
     .titleBlock {
@@ -439,8 +439,8 @@ html {
 
     .descriptionBlock {
         font-size: 20px;
+        font-weight: 400;
         margin-bottom: 20px;
-        height: 150px;
         overflow: hidden;
         background-color: rgba(255, 255, 255, 0.72);
         text-overflow: ellipsis;

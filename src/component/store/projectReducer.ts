@@ -4,6 +4,7 @@ import todoReact from '../../sourse/image/todo_react.png';
 import layoutWelbex from '../../sourse/image/layout-welbex.jpg';
 import portfolioV1 from "../../sourse/image/portfolioV1.png";
 import portfolioV2 from "../../sourse/image/portfolioV2.png";
+import clinic from "../../sourse/image/clinic.png"
 
 const initialState = {
     project: [
@@ -78,6 +79,17 @@ const initialState = {
             site: '@',
             Github: 'https://github.com/Wanashka/portfolio-v2',
             skills: ["CSS-modules", "HTML5", "ReactJS", "Redux", "TypeScript"],
+        },
+        {
+            id: 6,
+            title: 'Сайт клиники',
+            description: [
+                "Я разработал адаптивный сайт для клиники с использованием методологии БЭМ " +
+                "и внедрил слайдер для улучшения визуального опыта пользователей."],
+            image: clinic,
+            site: 'https://wanashka.github.io/clinic-s-website/',
+            Github: 'https://github.com/Wanashka/clinic-s-website',
+            skills: ["CSS", "HTML5", "JavaScript", "БЭМ"],
         },
     ],
     value: 0,
